@@ -26,8 +26,10 @@
         first = inv.first;
         last = inv.last;
         year = inv.year;
-        discoveries = discoveries;
-      })
+        if(inven.first == inventor){
+             someDiscoveries = discoveries 
+          }
+        });
   }
 
   console.log(addDiscoveries('Einstein', 
