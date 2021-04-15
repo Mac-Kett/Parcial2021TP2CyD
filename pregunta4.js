@@ -22,7 +22,12 @@
    * @param {*} inventors 
    */
   function addDiscoveries(inventor, discoveries, inventors){
-      
+      return inventors.map(inv => {
+        first = inv.first;
+        last = inv.last;
+        year = inv.year;
+        discoveries = discoveries;
+      })
   }
 
   console.log(addDiscoveries('Einstein', 

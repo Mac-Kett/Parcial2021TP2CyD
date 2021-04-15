@@ -3,7 +3,29 @@
 // si la longitud del array es < 3 se debe retornar undefined
 
 const greater3 = nums => {
-    
+    let arrOrdenado = nums.sort(function (a, b){return b - a});
+    let terceroMasGrande;
+
+    if(arrOrdenado.length < 2){
+            return undefined;
+    }
+
+    for(let i = 0; i < nums.lenght; i++){
+
+        let primero = arrOrdenado[0];
+        let segundo;
+
+       if(primero > arrOrdenado[i+1]){
+        segundo = arrOrdenado[i+1];
+        
+            if(arrOrdenado[i+2] > segundo){
+                terceroMasGrande = arrOrdenado[i+2];
+            } 
+        } else {
+           i++;
+        }
+    }
+       return terceroMasGrande;
 }
 
 

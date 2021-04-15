@@ -20,3 +20,43 @@ const beers = [
     { name: 'Stolen Fruit', abv: 4.6, label: 'https://s3.amazonaws.com/brewerydbapi/beer/YGT30k/upload_uVCHP7-large.png', type: 'Wheat' },
 ];
 
+
+  let nombre;
+  let carpeta;
+
+
+function traeCarpetaYNombre(beers){
+  return beers.array.forEach(element => {
+    element
+      .split('/beer/')
+      .slice(0)
+      .split('.png')
+      .slice(1) 
+
+      nombre = traeNombre(beers);
+      carpeta = traeCarpeta(beers);
+  });
+     
+}
+
+function traeNombre(beers){
+  return beers
+      .split('/')
+      .slice(0)
+      
+}
+
+function traeCarpeta(beers){
+  return beers
+  .split('/')
+  .slice(1)
+}
+
+function modificaLasURL(nombre, carpeta){
+  beers.map(beer => {
+    name = beer.name;
+    abv = beer.abv;
+    label = beer.label+carpeta+'/'+nombre+'.png';
+    type = beer.type;
+  })
+}

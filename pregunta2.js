@@ -15,7 +15,17 @@
   }
 
 const sale = function (article, cant){
+
+  let aux = inventory[article];
+  const codigoAprobado = 200;
+  const codigoDesaprobado = 500;
   
+  if(value >= cant){
+    inventory[article] = inventory[article] - cant;
+    return codigoAprobado;
+  } else {
+    return codigoDesaprobado;
+  }
 }
 
 // TESTS (no modificar)
